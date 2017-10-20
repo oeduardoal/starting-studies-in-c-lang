@@ -21,7 +21,7 @@ int main()
                 d++;
             }else{
                 d=0;
-                printf("\nFicou cheio! Comecando de novo \(pares\)\n\n");
+                printf("\nFicou cheio! Comecando de novo (pares)\n\n");
             }
 
         }
@@ -30,7 +30,7 @@ int main()
                 impares[e] = numeros[c];
                 e++;
             }else{
-                printf("\nFicou cheio! Comecando de novo \(impares\)\n\n");
+                printf("\nFicou cheio! Comecando de novo (impares)\n\n");
                 e=0;
 
             }
@@ -39,13 +39,13 @@ int main()
 
     printf("\n\n Pares\n");
     for(c = 0; c < 5; c++){
-        printf("\n POS: %d VAL %d", c,pares[c]);
+        printf("\n POS: %d VAL: %d", c,pares[c]);
     }
     printf("\n");
 
     printf("\n\n Impares\n");
     for(c = 0; c < 5; c++){
-        printf("\n POS: %d VAL %d", c,impares[c]);
+        printf("\n POS: %d VAL: %d", c,impares[c]);
     }
     printf("\n");
     return 0;
