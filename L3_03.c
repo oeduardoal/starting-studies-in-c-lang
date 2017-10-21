@@ -3,18 +3,27 @@
 
 int main()
 {
-    int N[TM];
+    int V1[TM],V2[TM];
     int c,menor,posicao = 0;
     
     // zerar
-    for(c = 0 ; c < TM; c++)
-        N[c] = 0;
+    for(c = 0 ; c < TM; c++){
+        V1[c] = 0;
+        V2[c] = 0;
+    }
          
     for(c = 0 ; c < TM; c++){
-        printf("Escreva o numero para: %d ...... ",c);
-        scanf("%d",&N[c]);
+        printf("Escreva o numero para: %d ...... (Primeiro Vetor)",c);
+        scanf("%d",&V1[c]);
     }
-    
+
+    printf("\n");
+
+    for(c = 0 ; c < TM; c++){
+        printf("Escreva o numero para: %d ...... (Segundo Vetor)",c);
+        scanf("%d",&V2[c]);
+    }
+
     menor = N[0];
 
     for(c = 0; c < TM; c++){
