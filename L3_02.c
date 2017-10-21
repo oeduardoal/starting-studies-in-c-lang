@@ -1,6 +1,13 @@
 #include<stdio.h>
 #define TM 5
 
+/*
+*    @author Eduardo Almeida <oeduardoal@gmail.com>
+*    @problem
+*         Faça um algoritmo que leia um vetor N[20]. A seguir, encontre o menor elemento do vetor N e a sua posição dentro
+*         do vetor, mostrando: “O menor elemento de N é”, M, “e sua posição dentro do vetor é:”,P.
+*/
+
 int main()
 {
     int N[TM];
