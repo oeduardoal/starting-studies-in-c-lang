@@ -14,20 +14,20 @@ int main()
     }
          
     for(c = 0 ; c < TM; c++){
-        printf("Escreva o numero para: %d ...... (Primeiro Vetor)",c);
+        printf("Escreva o numero para: %d (Primeiro Vetor) ...... ",c);
         scanf("%d",&V1[c]);
     }
 
     printf("\n");
 
     for(c = 0 ; c < TM; c++){
-        printf("Escreva o numero para: %d ...... (Segundo Vetor)",c);
+        printf("Escreva o numero para: %d (Segundo Vetor) ...... ",c);
         scanf("%d",&V2[c]);
     }
 
     for(c = 0 ; c < TM; c++){            
         res[c] = V1[c] * V2[c]; 
-        printf("\nw[%d] = %d\n",c,res[c]);   
+        printf("\nres[%d] = %d\n",c,res[c]);   
     }
 
     printf("\n");
