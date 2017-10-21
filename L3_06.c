@@ -1,32 +1,38 @@
 #include<stdio.h>
-#define TM 5
+#define TM 3
 
 /*
 *    @author Eduardo Almeida <oeduardoal@gmail.com>
 *    @problem
-*          Faça um algoritmo que leia um vetor S[20] e uma variável A. A seguir, mostre o produto da variável A pelo vetor
+*    Faça um algoritmo que leia dois vetores: F[20] e G[20]. Calcule e mostre, a seguir, o produto dos valores de F por G.
 */
 
 int main()
 {
-    int K[TM],N[TM];
-    int c,valor = 0;
+    int F[TM],G[TM];
+    
+    int c,i,valor = 0;
     
     // zerar
     for(c = 0 ; c < TM; c++){
-        K[c]   = 0;
+        F[c]   = 0;
+        G[c]   = 0;
     }
-         
+
+    for(i = 0 ; i < TM ; i ++){
+        printf("Escreva o numero para: %d ( VETOR 1 ) ...... ", i);
+        scanf("%d",&F[i]);
+    }
+    for(i = 0 ; i < TM ; i ++){
+        printf("Escreva o numero para: %d ( VETOR 2 ) ...... ", i);
+        scanf("%d",&G[i]);
+    }
+
     for(c = 0 ; c < TM; c++){
-        printf("Escreva o numero para: %d ( VETOR | Produto 1 ) ...... ", c);
-        scanf("%d",&K[c]);
-    }
-
-    printf("Escreva o valor para ser multiplicado ( Produto 2 ) ...... ");
-    scanf("%d",&valor);
-
-    for(c = 0 ; c < TM ; c ++){
-        printf("\n %d x %d = %d", K[c], valor, K[c]*valor);
+        printf("\n");
+        for(i = 0 ; i < TM ; i ++){
+            printf("%d X %d = %d\n",F[c],G[i], F[c] * G[i]);
+        }
     }
 
     printf("\n\n");
