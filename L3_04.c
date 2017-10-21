@@ -14,7 +14,7 @@ int main()
     int c,i,atual,prox,ante = 0;
     
     // zerar
-    for(c = 0 ; c < 5; c++){
+    for(c = 0 ; c < TM; c++){
         K[c]   = 0;
         N[c]   = 0;
     }
