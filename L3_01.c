@@ -1,9 +1,12 @@
 #include<stdio.h>
 
-// Elaborar um algoritmo que lê um conjunto de 30 valores e os coloca em 2 vetores conforme estes valores forem
-// pares ou ímpares. O tamanho do vetor é de 5 posições. Se algum vetor estiver cheio, escrevê-lo. Terminada a leitura
-// escrever o conteúdo dos dois vetores. Cada vetor pode ser preenchido tantas vezes quantas for necessário.
-
+/*
+*    @author Eduardo Almeida <oeduardoal@gmail.com>
+*    @problem
+*        Elaborar um algoritmo que lê um conjunto de 30 valores e os coloca em 2 vetores conforme estes valores forem
+*        pares ou ímpares. O tamanho do vetor é de 5 posições. Se algum vetor estiver cheio, escrevê-lo. Terminada a leitura
+*        escrever o conteúdo dos dois vetores. Cada vetor pode ser preenchido tantas vezes quantas for necessário.
+*/
 int main()
 {
     int numeros[30] = {0,0,0,0,0,0,0,0,0,0};
