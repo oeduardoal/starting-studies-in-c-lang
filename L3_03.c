@@ -3,13 +3,14 @@
 
 int main()
 {
-    int V1[TM],V2[TM];
-    int c,menor,posicao = 0;
+    int V1[TM],V2[TM],res[TM];
+    int c = 0;
     
     // zerar
     for(c = 0 ; c < TM; c++){
-        V1[c] = 0;
-        V2[c] = 0;
+        V1[c]   = 0;
+        V2[c]   = 0;
+        res[c]  = 0;
     }
          
     for(c = 0 ; c < TM; c++){
@@ -24,17 +25,11 @@ int main()
         scanf("%d",&V2[c]);
     }
 
-    menor = N[0];
-
-    for(c = 0; c < TM; c++){
-        if(N[c] < menor){
-            menor = N[c];
-            posicao = c;
-        }
-            
+    for(c = 0 ; c < TM; c++){            
+        res[c] = V1[c] * V2[c]; 
+        printf("\nw[%d] = %d\n",c,res[c]);   
     }
 
     printf("\n");
-    printf("Menor valor: %d | Na posicao: %d  \n", menor, posicao);
     return 0;
 }
