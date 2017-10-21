@@ -4,8 +4,7 @@
 /*
 *    @author Eduardo Almeida <oeduardoal@gmail.com>
 *    @problem
-*         Faça um algoritmo que leia um vetor K[30]. Troque a seguir, todos os elementos de ordem ímpar do vetor com os
-elementos de ordem par imediatamente posteriores.
+*         Escreva um algoritmo que leia dois vetores de 10 posições e faça a multiplicação dos elementos de mesmo índice, colocando o resultado em um terceiro vetor. Mostre o vetor resultante
 */
 
 int main()
