@@ -9,12 +9,13 @@
 
 int main()
 {
-    int K[5];
-    int c,prox,ante,stats = 0;
+    int K[5],N[5];
+    int c,i,atual,prox,ante = 0;
     
     // zerar
-    for(c = 0 ; c < 6; c++){
+    for(c = 0 ; c < 5; c++){
         K[c]   = 0;
+        N[c]   = 0;
     }
          
     for(c = 0 ; c < TM; c++){
@@ -22,33 +23,32 @@ int main()
         scanf("%d",&K[c]);
     }
 
-    printf("\n");
-    
     for(c = 0 ; c < TM ; c ++){
-         // São ímpares
-         if(K[c] % 2 == 1){
-                if(c < TM){
-                    prox = K[c+1];            
-                }
-                else {
-                    prox = K[c];
-                }
-                ante = K[c];
-                printf("| %d | %d ", prox, ante);
-        
-        }
-        else {
-        }
+        // São ímpares
+        N[c] = K[c];
+        if(K[c] % 2 == 1){
+            for( i = c; i < TM ; i++){
+                if(K[i] % 2 == 0){
+                    
+                    atual = K[c];
+                    
+                    K[c] = K[i];
+                    
+                    K[i] = atual;
 
-        
+                    i = 5;
+                }
+            }
+        }
     }
 
-    printf("\n");
-    
+    printf("\n\n");
+
+    printf("\tNovo array:\n\n");
     for(c = 0 ; c < TM ; c ++){
-        // printf("%d | ", K[c]);
+        printf("\t[%d] = %d\n",c, K[c]);
     }
 
-    printf("\n");
+    printf("\n\n");
     return 0;
 }
