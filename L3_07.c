@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define TM 3
+#define TM 10
 int main(){
 
     int vetorA[TM],vetorB[TM],vetorR[TM] = {0};
