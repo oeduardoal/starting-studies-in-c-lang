@@ -53,7 +53,8 @@ void getDadosViagem(){
         printf("\n  # Poltrona preenchida!");        
         printf("\n  # Calculando preco a pagar... ");        
         espera();
-        printf("\n  # Preco a pagar: 122.213 ");        
+        calcularPreco( dadosViagem );
+
         getchar();
         printf("\n\nPressione enter para voltar ao menu!\n\n");
         getchar();

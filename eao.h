@@ -40,6 +40,7 @@ int menu(void)
     return 1;
 
 }
+
 void limpandoMatriz( )
 {
     int a,b;
@@ -110,9 +111,11 @@ int check( int viagem[5] )
         return 0;
     }else{
         // verdadeiro
+        save(fila, c);
         return 1;
     }
 }
+
 int lugaresPorFila( int fila )
 {
 
@@ -133,6 +136,11 @@ int lugaresPorFila( int fila )
     
     return qtde;
 }
+
+int calcularPreco( dadosViagem ) {
+
+}
+
 int save( int a, int b )
 {
     // int status = check( a, b );
