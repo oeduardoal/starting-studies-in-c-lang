@@ -1,0 +1,4 @@
+
+void relatorio_vagas(){
+    
+}

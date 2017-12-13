@@ -1,83 +1,33 @@
 #include <stdio.h>
-#define SALAS 5
-#define HORARIOS 6
+#include <stdlib.h>
 
-void limpandoMatriz( int reunioes [SALAS][HORARIOS] )
-{
-    int a,b;
+void sleep( int );
 
-    for(a = 0; a < SALAS; a++)
-    {
-        for(b = 0; b < HORARIOS; b++)
-        {
-                reunioes[a][b] = 0;
-        }
-    }
-}
+#ifdef WIN32
+  #define clear() system("cls") 
+  #define espera() sleep(500) 
+#else
+  #define clear() system("/usr/bin/clear")
+  #define espera() sleep(3) 
+#endif
 
-void mostrarOpcoes( int reunioes [SALAS][HORARIOS] )
-{
-    int a,b;
 
-    for(a = 0; a < SALAS; a++)
-    {
-        for(b = 0; b < HORARIOS; b++)
-        {
-            printf("%d - ", reunioes[a][b]);
-        }
-        printf("(%d\n", a);
-    }
-}
+#define FILEIRAS 9
+#define POLTRONAS 4
 
-int verificarPosicao( int a, int b, int reunioes [SALAS][HORARIOS] )
-{
-    int a,b;
-
-    for(a = 0; a < SALAS; a++)
-    {
-        for(b = 0; b < HORARIOS; b++)
-        {
-            if(reunioes[a][b] == 1)
-            {
-                return 1;
-            }else{
-                return 0;
-            }
-        }
-    }
-}
-
-int salvarReuniao( int a, int b, int reunioes [SALAS][HORARIOS] )
-{
-    int status = verificarPosicao( a, b, reunioes );
-    if(status == 1)
-    {
-        
-    }
-    return reunioes[a][b] = 1;
-}
+    // Array Principal
+    int lugares [FILEIRAS][POLTRONAS];
+#include "eao.h"
 
 int main()
 {
-    int reunioes [SALAS][HORARIOS];
-    int sala = 1;
-    int horario = 1;
-    limpandoMatriz(reunioes);
-
-    do{
-        mostrarOpcoes( reunioes );
-        
-        printf("\n\n");
-        printf("Escolha sala .... ");
-        scanf("%d", &sala);
-        printf("Escolha horario .... ");
-        scanf("%d", &horario);
-        printf("\n");
-
-        salvarReuniao( sala, horario, reunioes );
-
-        printf("\n\n");
-
-    }while( 1 );
-
+    limpandoMatriz(lugares);
+    
+    // menu( );
+    int qtde = 0;
+    lugares[0][0] = 1;
+    lugares[0][1] = 1;
+    lugares[0][2] = 1;
+    lugares[0][3] = 1;
+    menu();
 }
