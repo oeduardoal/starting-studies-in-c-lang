@@ -128,7 +128,73 @@ void show( )
     printf("\n  > %d Total Ocupadas", r3);
     printf("\n  > %d Total Vazias", r4);
     printf("\n  > %d Preco total arrecadado", valorTotal);
+    
+    int emFor,emTa,emQui,emPa,emJu;
+    emFor=emTa=emQui=emPa=emJu=0;
 
+    int desemFor,desemTa,desemQui,desemPa,desemJu;
+    desemFor=desemTa=desemQui=desemPa=desemJu=0;
+    
+    
+    int c;
+
+    for(c=0; c<5; c++){
+        emFor += pessoasPorCidade[0][c];
+    }
+
+    for(c=0; c<5; c++){
+        emTa += pessoasPorCidade[1][c];
+    }
+
+    for(c=0; c<5; c++){
+        emQui += pessoasPorCidade[2][c];
+    }
+
+    for(c=0; c<5; c++){
+        emPa += pessoasPorCidade[3][c];
+    }
+
+    for(c=0; c<5; c++){
+        emJu += pessoasPorCidade[4][c];
+    }
+
+    // 
+
+    for(c=0; c<5; c++){
+        desemFor += pessoasPorCidade[c][0];
+    }
+
+    for(c=0; c<5; c++){
+        desemTa += pessoasPorCidade[c][1];
+    }
+
+    for(c=0; c<5; c++){
+        desemQui += pessoasPorCidade[c][2];
+    }
+
+    for(c=0; c<5; c++){
+        desemPa += pessoasPorCidade[c][3];
+    }
+
+    for(c=0; c<5; c++){
+        desemJu += pessoasPorCidade[c][4];
+    }
+
+    printf("\n\n");
+
+    printf("\n  > %d Embarcou em Fortaleza ", emFor);
+    printf("\n  > %d Embarcou em Taua ", emTa);
+    printf("\n  > %d Embarcou em Quiterianopolis ", emQui);
+    printf("\n  > %d Embarcou em Palhano ", emPa);
+    printf("\n  > %d Embarcou em Jurema ", emJu);
+
+    printf("\n\n");
+
+    printf("\n  > %d Desembarcou em Fortaleza ", desemFor);
+    printf("\n  > %d Desembarcou em Taua ", desemTa);
+    printf("\n  > %d Desembarcou em Quiterianopolis ", desemQui);
+    printf("\n  > %d Desembarcou em Palhano ", desemPa);
+    printf("\n  > %d Desembarcou em Jurema ", desemJu);
 }
 
 int check( int viagem[5] )

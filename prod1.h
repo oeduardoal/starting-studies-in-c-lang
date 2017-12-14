@@ -90,7 +90,7 @@ void inciar_compra(){
         printf("\n  1. Fortaleza ");
         printf("\n  2. Taua ");
         printf("\n  3. Quiterianopolis");
-        printf("\n  4. Palhano\n");
+        printf("\n  4. Palhano");
         printf("\n  5. Jurema\n");
         printf("\n  > Entre com a opcao: ");
         scanf("%d", &dadosViagem[0]);
@@ -104,7 +104,7 @@ void inciar_compra(){
         printf("\n  1. Fortaleza ");
         printf("\n  2. Taua ");
         printf("\n  3. Quiterianopolis");
-        printf("\n  4. Palhano\n");
+        printf("\n  4. Palhano");
         printf("\n  5. Jurema\n");
         printf("\n  > Entre com a opcao: ");
         scanf("%d", &dadosViagem[1]);
