@@ -25,9 +25,15 @@ int main()
     
     // menu( );
     int qtde = 0;
-    lugares[0][0] = 1;
-    lugares[0][1] = 1;
-    lugares[0][2] = 1;
     lugares[0][3] = 1;
+    lugares[1][2] = 1;
+    lugares[1][3] = 1;
+    lugares[3][1] = 1;
+    lugares[3][1] = 1;
+    lugares[5][1] = 1;
+    lugares[5][3] = 1;
+    lugares[7][2] = 1;
+    lugares[7][0] = 1;
+    lugares[0][2] = 1;
     menu();
 }

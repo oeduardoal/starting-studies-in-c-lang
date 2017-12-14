@@ -11,9 +11,12 @@ void getDadosViagem(){
     int c   = 0;
     int op  = 0;
     lugarPorFila = 0;
+    for(c=2;c<=FILEIRAS;c++){
+        dadosViagem[c] = 0;
+    }
     while((dadosViagem[2]<=0) || (dadosViagem[2]>=10)){
         printf("\n  >  Passo 3/3 | Escolha uma fila.. \n");
-        for(c = 0; c <= FILEIRAS; c++){
+        for(c = 0; c < FILEIRAS; c++){
             lugarPorFila = lugaresPorFila(c);
             printf("\n  %d. Fileira | %d lugares vagos", c+1, lugarPorFila);
         }
@@ -43,7 +46,7 @@ void getDadosViagem(){
     }
 
     dadosViagem[2] -= 1;
-    dadosViagem[3] -= 1;
+    // dadosViagem[3] -= 1;
     dadosViagem[4] -= 1;
     
     int status = check(dadosViagem);
@@ -62,12 +65,12 @@ void getDadosViagem(){
 
     }else{
         clear();
-        printf("\n  # Poltrona já ocupada");
+        printf("\n  # Poltrona já ocupada [%d]", dadosViagem[2]);
         printf("\n");  
         getchar();
         printf("\n\nPressione enter para voltar!\n\n");
         getchar();
-        getDadosViagem();        
+        menu();        
     }
 }
 
@@ -81,7 +84,7 @@ void inciar_compra(){
     for(c=0;c<=FILEIRAS;c++){
         dadosViagem[c] = 0;
     }
-
+    
     while((dadosViagem[0]<=0) || (dadosViagem[0]>=5)){
         printf("\n  >  Passo 1/3 | Escolha a cidade de partida \n");
         printf("\n  1. Fortaleza ");
