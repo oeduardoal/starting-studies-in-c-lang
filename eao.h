@@ -127,6 +127,7 @@ void show( )
     printf("\n  > %d Pessoas no Corredor", r2);
     printf("\n  > %d Total Ocupadas", r3);
     printf("\n  > %d Total Vazias", r4);
+    printf("\n  > %d Preco total arrecadado", valorTotal);
 
 }
 
@@ -177,11 +178,7 @@ int lugaresPorFila( int fila )
     int qtde = 0;
     int b = 0;
     int a = 0;
-    
-    lugares[0][0] = 1;
-    lugares[0][1] = 1;
-    lugares[0][2] = 1;
-    lugares[0][3] = 1;
+
         for(b = 0; b < POLTRONAS; b++)
         {
             if(lugares[fila][b] == 0){
@@ -195,7 +192,7 @@ int lugaresPorFila( int fila )
 int calcularPreco( int dadosViagem[5] ) {
     int emb = dadosViagem[0];
     int desemb = dadosViagem[1];
-    int c = 0;
+    int c = 0,i=0;
     int precosPorCidade[5];
     int precoPassagem = 0;
     precosPorCidade[0] = 0;
@@ -204,33 +201,129 @@ int calcularPreco( int dadosViagem[5] ) {
     precosPorCidade[3] = 35;
     precosPorCidade[4] = 53;
 
-    switch(desemb){
+
+    for(c=0;c<5;c++){
+        for(i=0;i<5;i++){
+            pessoasPorCidade[c][i] = 0;
+        }
+    }
+    // 1o indice = cidade embarque 0-4
+    // 2o indice = cidade desembarque 0-4
+    // pessoasPorCidade[5][2]
+    switch(emb){
         case 1:
-            if(emb == 1){
+            if(desemb == 1){
                 precoPassagem = ((15 + 12 + 35 + 53) * 2);
+                pessoasPorCidade[0][0]++;
+            }else if(desemb == 2){
+                precoPassagem = (15);
+                pessoasPorCidade[0][1]++;
+            }else if(desemb == 3){
+                precoPassagem = (12 + 15);
+                pessoasPorCidade[0][2]++;
+            }else if(desemb == 4){
+                precoPassagem = (35 + 12 + 15);
+                pessoasPorCidade[0][3]++;
+            }else if(desemb == 5){
+                pessoasPorCidade[0][4]++;
+                precoPassagem = (53 + 35 + 12 + 15);
+            }
+            printf("\n Preco da passagem: %d", precoPassagem);
+            break;
+        case 2:
+            if(desemb == 1){
+                precoPassagem = 15;
+                pessoasPorCidade[1][0]++;
                 printf("\n Preco da passagem: %d", precoPassagem);
-                break;
-            }else if(emb == 2){
-                precoPassagem = (((12 + 35 + 53) * 2) + 15);
+            }else if(desemb == 2){
+                precoPassagem = ((12 + 35 + 53) * 2);
+                pessoasPorCidade[1][1]++;
                 printf("\n Preco da passagem: %d", precoPassagem);
-            }else if(emb == 3){
-                precoPassagem = (((35 + 53) * 2) + 12 + 15);
+            }else if(desemb == 3){
+                pessoasPorCidade[1][2]++;
+                precoPassagem = (12);
                 printf("\n Preco da passagem: %d", precoPassagem);
-            }else if(emb == 4){
-                precoPassagem = (((53) * 2) + 35 + 12 + 15);
+            }else if(desemb == 4){
+                pessoasPorCidade[1][3]++;
+                precoPassagem = (35 + 12);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 5){
+                pessoasPorCidade[1][4]++;
+                precoPassagem = (12 + 35 + 53);
                 printf("\n Preco da passagem: %d", precoPassagem);
             }
             break;
-        case 2:
-            break;
         case 3:
+            if(desemb == 1){
+                pessoasPorCidade[2][0]++;
+                precoPassagem = (12 + 15);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 2){
+                pessoasPorCidade[2][1]++;
+                precoPassagem = (12);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 3){
+                pessoasPorCidade[2][2]++;
+                precoPassagem = ((35 + 53) * 2);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 4){
+                pessoasPorCidade[2][3]++;
+                precoPassagem = (35);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 5){
+                pessoasPorCidade[2][4]++;
+                precoPassagem = (35 + 53);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }
             break;
         case 4:
+            if(desemb == 1){
+                pessoasPorCidade[3][0]++;
+                precoPassagem = (35 + 12 + 15);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 2){
+                pessoasPorCidade[3][1]++;
+                precoPassagem = (35 + 12);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 3){
+                pessoasPorCidade[3][2]++;
+                precoPassagem = (35);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 4){
+                pessoasPorCidade[3][3]++;
+                precoPassagem =  ((53) * 2);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 5){
+                pessoasPorCidade[3][4]++;
+                precoPassagem = (53);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }
             break;
         case 5:
+            if(desemb == 1){
+                pessoasPorCidade[4][0]++;
+                precoPassagem = (53 + 35 + 12 + 15);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 2){
+                pessoasPorCidade[4][1]++;
+                precoPassagem = (12 + 35 + 53);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 3){
+                pessoasPorCidade[4][2]++;
+                precoPassagem = (35 + 53);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 4){
+                pessoasPorCidade[4][3]++;
+                precoPassagem =  (53);
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }else if(desemb == 5){
+                pessoasPorCidade[4][4]++;
+                precoPassagem = (53 + 35 + 12 + 15) * 2;
+                printf("\n Preco da passagem: %d", precoPassagem);
+            }
             break;
     }
-    
+    valorTotal += precoPassagem;
 }
 
 int save( int a, int b )

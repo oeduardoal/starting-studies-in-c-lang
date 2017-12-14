@@ -17,6 +17,8 @@ void sleep( int );
 
     // Array Principal
     int lugares [FILEIRAS][POLTRONAS];
+    int pessoasPorCidade[5][5];
+    int valorTotal = 0;
 #include "eao.h"
 
 int main()
@@ -25,15 +27,5 @@ int main()
     
     // menu( );
     int qtde = 0;
-    lugares[0][3] = 1;
-    lugares[1][2] = 1;
-    lugares[1][3] = 1;
-    lugares[3][1] = 1;
-    lugares[3][1] = 1;
-    lugares[5][1] = 1;
-    lugares[5][3] = 1;
-    lugares[7][2] = 1;
-    lugares[7][0] = 1;
-    lugares[0][2] = 1;
-    menu();
+    menu( );
 }
