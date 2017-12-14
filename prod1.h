@@ -85,12 +85,13 @@ void inciar_compra(){
         dadosViagem[c] = 0;
     }
     
-    while((dadosViagem[0]<=0) || (dadosViagem[0]>=5)){
+    while((dadosViagem[0]<=0) || (dadosViagem[0]>=6)){
         printf("\n  >  Passo 1/3 | Escolha a cidade de partida \n");
         printf("\n  1. Fortaleza ");
         printf("\n  2. Taua ");
         printf("\n  3. Quiterianopolis");
         printf("\n  4. Palhano\n");
+        printf("\n  5. Jurema\n");
         printf("\n  > Entre com a opcao: ");
         scanf("%d", &dadosViagem[0]);
     }
@@ -98,12 +99,12 @@ void inciar_compra(){
     op = 0;
     clear();
 
-    while((dadosViagem[1]<=0) || (dadosViagem[1]>=5)){
+    while((dadosViagem[1]<=0) || (dadosViagem[1]>=6)){
         printf("\n  >  Passo 2/3 | Desembarca em.. \n");
         printf("\n  1. Fortaleza ");
         printf("\n  2. Taua ");
         printf("\n  3. Quiterianopolis");
-        printf("\n  4. Palhano\n");
+        printf("\n  6. Jurema\n");
         printf("\n  > Entre com a opcao: ");
         scanf("%d", &dadosViagem[1]);
     }
