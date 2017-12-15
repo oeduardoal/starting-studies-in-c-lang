@@ -91,20 +91,6 @@ void show( )
     int r1,r2,r3,r4,c1,c2;
     r1=r2=r3=r4=c1=c2=0;
 
-    // for(c1 = 0; c1 < FILEIRAS; c1++ ){
-    //     for(c2 = 0; c2 < POLTRONAS; c2++){
-    //         if(lugares[c1][c2]){ // poltronas ocupadas
-    //             r3++;
-    //             if((c2 == 1) || (c2 = 3)){
-    //                 r1++; // pessoas na janela
-    //             }else if((c2 == 0) || (c2 = 2)){
-    //                 r2++; // pessoas na janela
-    //             }
-    //         }else if(!lugares[c1][c2]){ // poltronas vagas
-    //             r4++;
-    //         }
-    //     }
-    // }
     for(a = FILEIRAS - 1; a >= 0; --a)
     {
         for(b = POLTRONAS - 1; b >= 0; --b)
@@ -199,11 +185,7 @@ void show( )
 
 int check( int viagem[5] )
 {
-    // viagem[0] => embarque
-    // viagem[1] => desembarque
-    // viagem[2] => fila
-    // viagem[3] => lado
-    // viagem[4] => poltrona
+
     int fila        = viagem[2];
     int lado        = viagem[3];
     int poltrona    = viagem[4];
@@ -225,8 +207,6 @@ int check( int viagem[5] )
         }
         
     }
-
-    // printf("\n\nlugares[%d][%d] = %d\n\n", fila, c, lugares[0][0]);
 
     if(lugares[fila][c] == 1){
         // falso
@@ -394,11 +374,6 @@ int calcularPreco( int dadosViagem[5] ) {
 
 int save( int a, int b )
 {
-    // int status = check( a, b );
-    // if(status == 1)
-    // {53
-        
-    // }
     return lugares[a][b] = 1;
 }
 
