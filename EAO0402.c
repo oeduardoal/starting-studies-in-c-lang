@@ -4,7 +4,7 @@
 
 int main(){
 	
-	int _num_1 = 0, _num_2 = 0, menor = 0, maior = 0, count = 1, multi = 1;
+	int _num_1 = 0, _num_2 = 0, menor = 0, maior = 0, count = 1;
 	
 	printf("\n\t EAO\n\n");
 	
@@ -17,11 +17,8 @@ int main(){
 	menor = ( _num_1 > _num_2 ) ? _num_2 : _num_1;
 	maior = ( _num_1 > _num_2 ) ? _num_1 : _num_2;
 	
-	while( multi < maior ) {
-		multi = menor * count;
-		if(multi < maior)
-			printf("\n %d", multi);
-		
+	while( menor * count < maior ) {
+		printf("\n %d", menor * count);
 		count++;		
 	}
 	
