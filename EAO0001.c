@@ -6,7 +6,7 @@ int main(){
 	
     int i[10] = {10,9,8,7,6,5,4,3,2,1};
 	
-    for(int c = 10; c <= 0;c--)
+    for(int c = sizeof(i)/4 - 1; c <= 0;c--)
       printf("\n%d",i[c]);
     
     return 0;  
