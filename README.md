@@ -1,4 +1,4 @@
-Caros 
+Caros...
 
 Acompanhando o desempenho de boa parte da turma, fiquei preocupado e estou montando a seguinte estratégia. 
 
@@ -20,5 +20,4 @@ Serão o 312, 319 e 323.
 
 Semana que vem faremos 3 exercicios do capitulo 4 e 2 do capitulo 5.
 
-até mais 
-
+Até mais!
