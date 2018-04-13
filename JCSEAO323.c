@@ -8,37 +8,26 @@ int numAbsolute(int, int);
 
 int main()
 {
-    int l1, l2, l3;
+    int l1, l2, l3, num[3], i;
 
-    do{
-        printf("Digite o primeiro lado do triangulo: \n");
-        scanf("%d", &l1);
-        if(l1 < 0)
-            printf("Numero negativo! Favor, digite um numero positivo!\n");
-    }while(l1 < 0);
-
-    do{
-        printf("Digite o segundo lado do triangulo: \n");
-        scanf("%d", &l2);
-        if(l2 < 0)
-            printf("Numero negativo! Favor, digite um numero positivo!\n");
-    }while(l2 < 0);
-
-    do{
-        printf("Digite o terceiro lado do triangulo: \n");
-        scanf("%d", &l3);
-        if(l3 < 0)
-            printf("Numero negativo! Favor, digite um numero positivo!\n");
-    }while(l3 < 0);
-
-    int l1l2 = numAbsolute(l1, l2), l1l3 = numAbsolute(l1, l3), l2l1 = numAbsolute(l2, l1), l2l3 = numAbsolute(l2, l3), l3l1 = numAbsolute(l3, l1), l3l2 = numAbsolute(l3, l2);
-
-    if ((l1 < (l2+l3)) || (l2 < (l1+l3)) || (l3 < (l2+l1)) )
+    for (i = 0; i < (sizeof(num)/4); ++i)
     {
-        isTriangle(l1, l2, l3);
-    }else if (((l1 > l3l2) || (l1 > l2l3)) || ((l2 > l1l3) || (l2 > l3l1)) || ((l3 > l1l2) || (l3 > l2l1)))
+        do{
+            printf("Digite o %dº lado do triangulo: \n", i+1);
+            scanf("%d", &num[i]);
+            if(num[i] < 0)
+                printf("Numero negativo! Favor, digite um numero positivo!\n");
+        }while(num[i] < 0);
+    }
+
+    int l1l2 = numAbsolute(num[0], num[1]), l1l3 = numAbsolute(num[0], num[2]), l2l1 = numAbsolute(num[1], num[0]), l2l3 = numAbsolute(num[1], num[2]), l3l1 = numAbsolute(num[2], num[0]), l3l2 = numAbsolute(num[2], num[1]);
+
+    if ((num[0] < (num[1]+num[2])) || (num[1] < (num[0]+num[2])) || (num[2] < (num[1]+num[0])) )
     {
-        isTriangle(l1, l2, l3);
+        isTriangle(num[0], num[1], num[2]);
+    }else if (((num[0] > l3l2) || (num[0] > l2l3)) || ((num[1] > l1l3) || (num[1] > l3l1)) || ((num[2] > l1l2) || (num[2] > l2l1)))
+    {
+        isTriangle(num[0], num[1], num[2]);
     }else{
         printf("Nao e um triangulo 1!\n");
     }
@@ -50,6 +39,7 @@ void isTriangle(int l1, int l2, int l3) {
         printf("É um triangulo equilatero\n");
     }else if((l1 != l2 &&  l1 == l3) || (l1 == l2 &&  l1 != l3) || (l2 != l1 &&  l2 == l3) || (l2 == l1 &&  l2 != l3) || (l3 != l1 &&  l3 == l2) || (l3 == l1 &&  l3 != l2)) {
         printf("É um triangulo isosceles\n");
+
     }else if((l1 != l2 && l2 != l3) || (l2 != l1 && l1 != l3) || (l3 != l2 && l2 != l1)) {
         printf("É um triangulo escaleno\n");
     }else {
