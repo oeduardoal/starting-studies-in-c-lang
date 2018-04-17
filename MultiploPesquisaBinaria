@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <string.h>
+
+int main() {
+	
+	int vetor[500];
+	int inf 	= 0;
+	int sup 	= (sizeof(vetor) / 4) - 1;
+	int meio	= 0;
+	int chave	= 0;
+	int flag 	= 1;
+	int n		= 0;
+	
+	for( n = 0; n < 500; n++ ){
+		vetor[n] = n * 3;
+		printf("\n\nvetor[%d] = %d\n\n", n, vetor[n] );
+	}
+
+	system("cls");
+	printf("\n\n\nValores preenchidos!\n");
+	
+	do{
+		
+		printf("\n\n\nEntre com um multiplo de 3: ");
+		scanf(" %d", &chave);
+		
+	}while( (chave%3 != 0) && (chave >= 0) && (chave < 1495) );
+	
+	system("cls");
+	printf("\n\n\nValor digitado (%d) ", chave);
+	printf("\n\n\nEnter para procurar no vetor\n\n\n");
+	system("pause");
+	system("cls");
+	
+	while( flag == 1 ){
+
+		meio = ( sup + inf  ) / 2;
+		
+		if( chave == vetor[meio] ){
+			flag = 0;
+			printf("\nValor encontrado (%d) na posicao: %d\n",chave, meio);
+		}
+		else if( chave < vetor[meio] )
+		{
+			sup = meio - 1;
+		}
+		else if( chave > vetor[meio] )
+		{
+			inf = meio + 1;
+		}else{
+			flag = 0;
+			printf("Valor nao encontrado!");
+		}
+		
+		
+	}
+
+	return 0;	
+}
