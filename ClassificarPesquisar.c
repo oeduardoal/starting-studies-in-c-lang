@@ -4,6 +4,14 @@
 #include <string.h>
 #include <strings.h>
 
+/*
+* 
+* @ Data: 22.04.2018
+* @ Autor: Eduardo Almeida
+* @ Matricula: 17.2.000024
+*
+*/
+
 int main()
 {
     int vetor[10000];
