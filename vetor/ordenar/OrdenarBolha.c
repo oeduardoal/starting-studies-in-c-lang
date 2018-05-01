@@ -13,20 +13,19 @@
 
 int main()
 {
-	int vetor[] = {2,5,3,10,11,13};
-	int size = sizeof(vetor) / 4;
-	int troca, j, i,cont, aux;
+	int vetor[] = {20,5,3,10,11,13};
+	int size = (sizeof(vetor) / 4) - 1;
+	int troca = 1, j, i,cont, aux;
 	system("cls");
 	printf("# Comecar? Enter!");
 	getchar();
 
-	
-	while( troca == 1 ){
+	for( ; troca == 1 ; ){
 	
 		j = 0;
 		troca = 0;
 		
-		while( j < size - 1 ){
+		while( j < size ){
 			
 			printf("\n> %d eh maior que %d", vetor[j], vetor[j+1] );
 				getchar();
@@ -37,22 +36,19 @@ int main()
 					aux = vetor[j];
 					vetor[j] = vetor[j+1];
 					vetor[j+1] = aux;
-					troca =1;
+					troca = 1;
 					cont++;
 					
 				}else{
 					printf("\n\tNao! Nao necessario Troca\n", j, j+1);
 				}
-				j++;
-			
-			// Diminui um do vetor
-			size -= 1;
-				
+				j++;			
 		}
+		size--;;
 	}
 
 	printf("\n\n");
-	for(i=0;i<5;i++) {
+	for(i=0;i<6;i++) {
 		printf("Vetor Ordenado (%d): %d\n", i, vetor[i]);
 	} 
 	
