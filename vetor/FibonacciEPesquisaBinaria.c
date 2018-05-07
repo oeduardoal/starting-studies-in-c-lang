@@ -71,7 +71,7 @@ int main() {
 		system("pause");
 		system("cls");
 		
-	}while( chave != 0 );
+	}
 	
 	
 	return 0;
