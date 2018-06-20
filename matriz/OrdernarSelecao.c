@@ -18,7 +18,8 @@ int main()
 	
 	int i,j, c = 0, aux = 0, k = 0, min = 0, troca = 0, cont = 0;
 	int size = sizeof(vetor) / 4;
-	
+	int imenor, menor, col;
+	int m[TM][TM];
 	printf("\n");
 	for(i=0;i<TM;i++) {
 		for(j=0;j<TM;j++) {

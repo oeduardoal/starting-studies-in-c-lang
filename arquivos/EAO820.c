@@ -17,17 +17,18 @@ int main()
     fclose(fpo);
     char * res;
     i = 0;
-    while( !feof(fp) && i < 200 )
+    while( !feof(fp) && i < 199 )
     {
         fgets(linha[i], 60, fp);
         if( strstr( linha[i], "SILVA" ) )
         {
-            fpo = fopen("820.out", "a");
-            fputs(linha[i], fpo );
-            fclose(fpo);
-            // fprintf(fpo, "\n\tAQUI => %s", linha[i]);
+            // fpo = fopen("820.out", "a");
+            // fputs(linha[i], fpo );
+            // fclose(fpo);
+            printf("\n%s", linha[i]);
+            // fprintf(fpo, "\n%s", linha[i]);
         }else{
-            printf("\nNTEM => %s", linha[i]);
+            // printf("\n%s", linha[i]);
         }
         i++;
     }   
