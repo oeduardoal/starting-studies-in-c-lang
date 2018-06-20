@@ -44,7 +44,7 @@ int main()
 				}
 				j++;			
 		}
-		size--;;
+		size--;
 	}
 
 	printf("\n\n");

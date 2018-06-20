@@ -3,7 +3,6 @@
 #include<strings.h>
 #include<string.h>
 #include<math.h>
-#include<conio.h>
 
 void eao()
 {
