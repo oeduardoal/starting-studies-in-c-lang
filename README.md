@@ -1,1 +1,1 @@
-### Starting studies in C Lang
+### starting-studies-in-c-lang
